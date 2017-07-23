@@ -9,6 +9,7 @@ namespace Diligent.BOL
         public int TaskId { get; set; }
         public byte StatusId { get; set; }
 
+        public virtual Task Task { get; set; }
         public virtual Status Status { get; set; }       
     }
 }
