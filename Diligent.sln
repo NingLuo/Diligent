@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diligent.DAL", "Diligent.DA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diligent.BLL", "Diligent.BLL\Diligent.BLL.csproj", "{44BF92F2-0BE3-4E5A-AFAA-530A289302BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diligent.API", "Diligent.API\Diligent.API.csproj", "{C1F91E78-36A1-4CD4-B7A8-A8DB024A73B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{44BF92F2-0BE3-4E5A-AFAA-530A289302BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44BF92F2-0BE3-4E5A-AFAA-530A289302BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44BF92F2-0BE3-4E5A-AFAA-530A289302BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1F91E78-36A1-4CD4-B7A8-A8DB024A73B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1F91E78-36A1-4CD4-B7A8-A8DB024A73B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1F91E78-36A1-4CD4-B7A8-A8DB024A73B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1F91E78-36A1-4CD4-B7A8-A8DB024A73B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

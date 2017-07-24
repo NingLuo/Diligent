@@ -1,20 +1,20 @@
 ﻿using Diligent.BOL;
-using Diligent.DAL;
+using Diligent.DAL.Core;
 
 namespace Diligent.BLL
 {
     public class UserBs : BLLBase
     {
-        private readonly UnitOfWork _unitOfWork;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public UserBs(DiligentContext context)
+        public UserBs(IUnitOfWork unitOfWork)
         {
-            _unitOfWork = new UnitOfWork(context);
+            _unitOfWork = unitOfWork;
         }
 
-        public bool Register(User user)
+        public bool CreateUser(User user)
         {
-            if (!IsValidOnRegister(user)) return false;
+            if (!IsValidOnCreate(user)) return false;
 
             _unitOfWork.Users.Add(user);
             _unitOfWork.Complete();
@@ -22,7 +22,7 @@ namespace Diligent.BLL
             return true;
         }
 
-        private bool IsValidOnRegister(User user)
+        private bool IsValidOnCreate(User user)
         {
             return true;
         }
