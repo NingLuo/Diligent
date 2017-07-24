@@ -12,6 +12,11 @@ namespace Diligent.BLL
             _unitOfWork = unitOfWork;
         }
 
+        public User GetUserById(int id)
+        {
+            return _unitOfWork.Users.Get(id);
+        }
+
         public bool CreateUser(User user)
         {
             if (!IsValidOnCreate(user)) return false;

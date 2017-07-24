@@ -11,9 +11,21 @@ namespace Diligent.API.Controllers
     public class UserController : ApiController
     {
         private readonly UserBs _userBs;
+
         public UserController(UserBs userBs)
         {
             _userBs = userBs;
+        }
+
+        [ResponseType(typeof(User))]
+        [HttpGet]
+        public IHttpActionResult GetUserById(int id)
+        {
+            var userInDb = _userBs.GetUserById(id);
+
+            if (userInDb == null) return NotFound();
+
+            return Ok(userInDb);
         }
 
         [ResponseType(typeof(User))]
