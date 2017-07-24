@@ -1,0 +1,11 @@
+D:\Projects\Diligent\Diligent\Diligent.BLL\bin\Debug\Diligent.BLL.dll
+D:\Projects\Diligent\Diligent\Diligent.BLL\bin\Debug\Diligent.BLL.pdb
+D:\Projects\Diligent\Diligent\Diligent.BLL\bin\Debug\Diligent.BOL.dll
+D:\Projects\Diligent\Diligent\Diligent.BLL\bin\Debug\Diligent.DAL.dll
+D:\Projects\Diligent\Diligent\Diligent.BLL\bin\Debug\EntityFramework.dll
+D:\Projects\Diligent\Diligent\Diligent.BLL\bin\Debug\Diligent.BOL.pdb
+D:\Projects\Diligent\Diligent\Diligent.BLL\bin\Debug\Diligent.DAL.pdb
+D:\Projects\Diligent\Diligent\Diligent.BLL\bin\Debug\EntityFramework.xml
+D:\Projects\Diligent\Diligent\Diligent.BLL\obj\Debug\Diligent.BLL.csprojResolveAssemblyReference.cache
+D:\Projects\Diligent\Diligent\Diligent.BLL\obj\Debug\Diligent.BLL.dll
+D:\Projects\Diligent\Diligent\Diligent.BLL\obj\Debug\Diligent.BLL.pdb
