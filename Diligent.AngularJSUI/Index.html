@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html ng-app="app.Diligent">
+<head>
+	<title>Diligent - Knowledge Management</title>
+    <meta charset="utf-8" />
+    <!--inject-vendor:css-->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div>
+        <div ng-include="'app/layout/shell.html'"></div>
+    </div>
+
+    <!--inject-vendor:js-->
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-cookies.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <!--endinject-->
+    <!--inject:js-->
+    <script src="app/app.module.js"></script>
+
+    <!--core module-->
+    <script src="app/core/core.module.js"></script>
+    <script src="app/core/config.js"></script>
+    <!--layout module-->
+    <script src="app/layout/layout.module.js"></script>
+    <script src="app/layout/shell.js"></script>
+    <!--endinject-->
+</body>
+</html>
