@@ -1,0 +1,89 @@
+﻿/*topnav color:rgb(33,150,243)*/
+.topnav {
+    background: #3c9b0d;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.topnav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.topnav-wrapper {
+    margin: 0 auto;
+    max-width: 950px;
+    height: 100%;
+    display: flex;
+}
+
+.topnav-brand {
+    height: 100%;
+    width: 20%;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.topnav-brand a {
+    font-size: 24px;
+}
+
+.topnav-search {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.topnav-icons {
+    /*background: blue;*/
+    height: 100%;
+    width: 50%;
+    display: flex;
+}
+
+.topnav-icons ul {
+    /*background: pink;*/
+    margin-left: auto;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.topnav-icons ul li {
+    /*background: gray;*/
+    height: 100%;
+    width: 30px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.topnav-icons ul li a {
+    display: block;
+    font-size: 20px;
+}
+
+.topnav-icons ul li a span {
+    /*background: red;*/
+    
+}
+
+@media (max-width: 750px) {
+
+    .topnav-brand {
+        width: 15%;
+    }
+
+    .topnav-search {
+        width: 55%;
+    }
+
+    .topnav-icons {
+        width: 30%;
+    }
+}
