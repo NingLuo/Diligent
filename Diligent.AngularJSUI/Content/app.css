@@ -1,4 +1,7 @@
-﻿/*topnav color:rgb(33,150,243)*/
+﻿
+/***********************
+       topnav
+************************/
 .topnav {
     background: #3c9b0d;
     width: 100%;
@@ -76,14 +79,18 @@
 @media (max-width: 750px) {
 
     .topnav-brand {
-        width: 15%;
+        width: 20%;
     }
 
     .topnav-search {
-        width: 55%;
+        width: 50%;
     }
 
     .topnav-icons {
         width: 30%;
     }
 }
+
+/***********************
+       sidebar
+************************/
