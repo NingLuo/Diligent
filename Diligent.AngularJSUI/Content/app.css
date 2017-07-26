@@ -1,4 +1,15 @@
-﻿
+﻿/***********************
+       Setting
+Color
+    body background: rgb(250, 250, 250)
+    topnav background: #3c9b0d
+    sidbar font: rgb(92, 92, 92)
+    content background: #fff
+    
+************************/
+body {
+    background: rgb(250, 250, 250);
+}
 /***********************
        topnav
 ************************/
@@ -7,6 +18,7 @@
     width: 100%;
     height: 60px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    z-index: 999;
 }
 
 .topnav a {
@@ -24,7 +36,7 @@
 
 .topnav-brand {
     height: 100%;
-    width: 20%;
+    width: 25%;
     padding-left: 10px;
     display: flex;
     align-items: center;
@@ -36,7 +48,7 @@
 
 .topnav-search {
     height: 100%;
-    width: 30%;
+    width: 25%;
     display: flex;
     align-items: center;
 }
@@ -90,7 +102,68 @@
         width: 30%;
     }
 }
+/***********************
+       main
+************************/
+.main {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 950px;
+    display: flex;
+}
+
+@media (max-width: 750px) {
+
+}
 
 /***********************
        sidebar
 ************************/
+.sidebar {
+    padding-top: 30px;
+    width: 260px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: rgb(92, 92, 92);
+    border-right: 1px solid #f1f1f1;
+}
+
+.sidebar-nav {
+    font-size: 16px;
+}
+
+.sidebar span {
+    margin-right: 10px;
+}
+
+.sidebar-categories p {
+    font-size: 14px;
+    margin: 10px 0;
+    padding: 5px 15px;
+    border-bottom: 1px solid rgb(204,204,204);
+}
+
+@media (max-width: 750px) {
+    .sidebar {
+        position: absolute;
+        left: -260px;
+    }
+}
+/***********************
+       content
+************************/
+.content {
+    width: 100%;
+    background: #fff;
+    border-right: 1px solid #f1f1f1;
+    overflow:hidden;
+    margin-top: 1px;
+}
+
+@media (max-width: 750px) {
+    
+}
