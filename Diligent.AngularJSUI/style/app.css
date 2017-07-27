@@ -218,3 +218,11 @@ body {
 @media (max-width: 750px) {
     
 }
+
+/***********************
+       Account
+************************/
+.account-panel {
+    max-width: 540px;
+    margin: 40px auto;
+}
