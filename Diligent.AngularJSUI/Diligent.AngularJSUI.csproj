@@ -74,7 +74,7 @@
     <Content Include="app\users\register.html" />
     <Content Include="app\users\register.js" />
     <Content Include="app\users\users.module.js" />
-    <Content Include="Content\app.css" />
+    <Content Include="style\app.css" />
     <Content Include="packages.config" />
     <Content Include="Scripts\angular-ui-router.js" />
     <Content Include="Scripts\angular-ui-router.min.js" />
