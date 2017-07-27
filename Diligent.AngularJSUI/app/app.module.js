@@ -3,7 +3,8 @@
 
     angular.module('app.Diligent', [
         'app.core',
-        'app.layout'
+        'app.layout',
+        'app.users'
     ]);
 
 })();

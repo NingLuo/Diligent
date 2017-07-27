@@ -1,11 +1,13 @@
 ﻿<div ng-controller="Shell as vm">
-    <div class="topnav">
+    <header>
         <div ng-include="'app/layout/topnav.html'"></div>
-    </div>
-    <div class="main">
+    </header>
+    <section class="main">
         <div class="sidebar">
             <div ng-include="'app/layout/sidebar.html'"></div>
         </div>
-        <div class="content"></div>
-    </div>
+        <div class="content">
+            <ui-view></ui-view>
+        </div>
+    </section>
 </div>

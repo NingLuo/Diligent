@@ -4,17 +4,16 @@
 
     angular
         .module('app.layout')
-        .controller('Shell', Shell);
+        .controller('Topnav', Topnav);
 
-    Shell.$inject = [];
+    Topnav.$inject = [];
 
-    function Shell(parameters) {
+    function Topnav() {
         var vm = this;
-
         activate();
 
         function activate() {
-            //console.log('Shell controller says hi');
+            
         }
     }
 })();

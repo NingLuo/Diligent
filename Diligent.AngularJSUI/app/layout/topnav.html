@@ -1,16 +1,24 @@
-﻿<nav class="topnav">                 
+﻿<div class="topnav" ng-controller="Topnav as vm">
     <div class="topnav-wrapper">
         <div class="topnav-brand">
             <a href="#">Diligent</a>
-        </div>           
+        </div>
         <div class="topnav-search">
             <input type="text" class="form-control" placeholder="Quick Find">
-        </div>            
-        <div class="topnav-icons">
+        </div>
+        <div class="topnav-icons" style="display: none">
             <ul>
                 <li><a href="#"><span class="glyphicon glyphicon-plus"></span></a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-cog"></span></a></li>
             </ul>
-        </div>               
+        </div>
+        <div class="topnav-account">
+            <ul>
+                <li><a href="#">Log in</a></li>
+                <li><a ui-sref="register">Sign up</a></li>
+            </ul>
+        </div>
     </div>
-</nav>
+</div>
+
+

@@ -83,10 +83,38 @@ body {
     font-size: 20px;
 }
 
-.topnav-icons ul li a span {
-    /*background: red;*/
-    
+
+.topnav-account {
+    /*background: blue;*/
+    height: 100%;
+    width: 50%;
+    display: flex;
 }
+
+.topnav-account ul {
+    /*background: pink;*/
+    margin-left: auto;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.topnav-account ul li {
+    /*background: gray;*/
+    height: 100%;
+    width: 60px;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+}
+
+.topnav-account ul li a {
+    display: block;
+    font-size: 16px;
+}
+
+
 
 @media (max-width: 750px) {
 
