@@ -4,10 +4,15 @@
 
     var core = angular.module('app.core');
 
-    core.config(['$stateProvider', '$urlMatcherFactoryProvider', function ($stateProvider, $urlMatcherFactoryProvider) {
+    core.config(configure);
+
+    configure.$inject = ['$stateProvider', '$urlMatcherFactoryProvider', '$urlRouterProvider',
+                         '$locationProvider'];
+
+    function configure($stateProvider, $urlMatcherFactoryProvider, $urlRouterProvider, $locationProvider) {
+        $urlRouterProvider.otherwise('/register');
         $urlMatcherFactoryProvider.caseInsensitive(true);
         
-
         var registerState = {
             name: 'register',
             url: '/register',
@@ -17,5 +22,7 @@
         }
 
         $stateProvider.state(registerState);
-    }]);
+
+        $locationProvider.html5Mode(true);
+    }
 })();
