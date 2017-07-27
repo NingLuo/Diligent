@@ -71,6 +71,8 @@
     <Content Include="app\layout\shell.js" />
     <Content Include="app\layout\sidebar.html" />
     <Content Include="app\layout\topnav.js" />
+    <Content Include="app\users\login.html" />
+    <Content Include="app\users\login.js" />
     <Content Include="app\users\register.html" />
     <Content Include="app\users\register.js" />
     <Content Include="app\users\users.module.js" />

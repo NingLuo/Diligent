@@ -10,18 +10,27 @@
                          '$locationProvider'];
 
     function configure($stateProvider, $urlMatcherFactoryProvider, $urlRouterProvider, $locationProvider) {
-        $urlRouterProvider.otherwise('/register');
+        $urlRouterProvider.otherwise('/login');
         $urlMatcherFactoryProvider.caseInsensitive(true);
-        
+
         var registerState = {
             name: 'register',
             url: '/register',
             templateUrl: 'app/users/register.html',
             controller: 'Register',
             controllerAs: 'vm'
-        }
+        };
+
+        var loginState = {
+            name: 'login',
+            url: '/login',
+            templateUrl: 'app/users/login.html',
+            controller: 'Login',
+            controllerAs: 'vm'
+        };
 
         $stateProvider.state(registerState);
+        $stateProvider.state(loginState);
 
         $locationProvider.html5Mode(true);
     }
