@@ -4,7 +4,8 @@
     angular.module('app.Diligent', [
         'app.core',
         'app.layout',
-        'app.users'
+        'app.user',
+        'app.service'
     ]);
 
 })();

@@ -7,7 +7,7 @@ using Diligent.BOL;
 
 namespace Diligent.API.Controllers
 {
-    [EnableCors("*", "*", "*")]
+    [EnableCors("http://localhost:11932", "*", "*")]
     public class UserController : ApiController
     {
         private readonly UserBs _userBs;

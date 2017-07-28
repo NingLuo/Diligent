@@ -16,7 +16,7 @@
         var registerState = {
             name: 'register',
             url: '/register',
-            templateUrl: 'app/users/register.html',
+            templateUrl: 'app/user/register.html',
             controller: 'Register',
             controllerAs: 'vm'
         };
@@ -24,7 +24,7 @@
         var loginState = {
             name: 'login',
             url: '/login',
-            templateUrl: 'app/users/login.html',
+            templateUrl: 'app/user/login.html',
             controller: 'Login',
             controllerAs: 'vm'
         };

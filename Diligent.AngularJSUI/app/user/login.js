@@ -3,16 +3,16 @@
     'use strict';
 
     angular
-        .module('app.users')
-        .controller('Register', Register);
+        .module('app.user')
+        .controller('Login', Login);
 
-    function Register() {
+    function Login() {
         var vm = this;
 
         activate();
 
         function activate() {
-            console.log('register controller');
+            console.log('Login controller');
         }
     }
 

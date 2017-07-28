@@ -16,7 +16,7 @@ namespace Diligent.DAL.EntityCongfigurations
             Property(u => u.Password)
             .IsRequired();
 
-            Property(u => u.UserName)
+            Property(u => u.Username)
             .IsRequired()
             .HasMaxLength(30);
         }
