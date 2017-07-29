@@ -2,6 +2,8 @@
 using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
+using AutoMapper;
+using Diligent.API.Dtos;
 using Diligent.BLL;
 using Diligent.BOL;
 
@@ -28,13 +30,19 @@ namespace Diligent.API.Controllers
             return Ok(userInDb);
         }
 
-        [ResponseType(typeof(User))]
+        [ResponseType(typeof(UserDto))]
         [HttpPost]
-        public IHttpActionResult CreateUser(User user)
+        public IHttpActionResult CreateUser(UserDto userDto)
         {
             if (!ModelState.IsValid) return BadRequest();
 
-            if (_userBs.CreateUser(user)) return Created(new Uri(Request.RequestUri + "/" + user.Id), user);
+            var user = Mapper.Map<UserDto, User>(userDto);
+
+            if (_userBs.CreateUser(user))
+            {
+                userDto.Id = user.Id;
+                return Created(new Uri(Request.RequestUri + "/" + userDto.Id), userDto);
+            }
 
             foreach (var error in _userBs.ErrorList)
             {

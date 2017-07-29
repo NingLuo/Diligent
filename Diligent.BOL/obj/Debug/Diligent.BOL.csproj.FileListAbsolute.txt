@@ -1,5 +1,4 @@
 D:\Projects\Diligent\Diligent\Diligent.BOL\bin\Debug\Diligent.BOL.dll
 D:\Projects\Diligent\Diligent\Diligent.BOL\bin\Debug\Diligent.BOL.pdb
-D:\Projects\Diligent\Diligent\Diligent.BOL\obj\Debug\Diligent.BOL.csprojResolveAssemblyReference.cache
 D:\Projects\Diligent\Diligent\Diligent.BOL\obj\Debug\Diligent.BOL.dll
 D:\Projects\Diligent\Diligent\Diligent.BOL\obj\Debug\Diligent.BOL.pdb

@@ -8,7 +8,7 @@ D:\Projects\Diligent\Diligent\Diligent.DAL\bin\Debug\Diligent.BOL.pdb
 D:\Projects\Diligent\Diligent\Diligent.DAL\bin\Debug\EntityFramework.xml
 D:\Projects\Diligent\Diligent\Diligent.DAL\bin\Debug\EntityFramework.SqlServer.xml
 D:\Projects\Diligent\Diligent\Diligent.DAL\obj\Debug\Diligent.DAL.csprojResolveAssemblyReference.cache
-D:\Projects\Diligent\Diligent\Diligent.DAL\obj\Debug\Diligent.DAL.dll
-D:\Projects\Diligent\Diligent\Diligent.DAL\obj\Debug\Diligent.DAL.pdb
 D:\Projects\Diligent\Diligent\Diligent.DAL\obj\Debug\Diligent.DAL.Migrations.InitialModel.resources
 D:\Projects\Diligent\Diligent\Diligent.DAL\obj\Debug\Diligent.DAL.csproj.GenerateResource.Cache
+D:\Projects\Diligent\Diligent\Diligent.DAL\obj\Debug\Diligent.DAL.dll
+D:\Projects\Diligent\Diligent\Diligent.DAL\obj\Debug\Diligent.DAL.pdb
