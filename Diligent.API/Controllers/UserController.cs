@@ -34,7 +34,7 @@ namespace Diligent.API.Controllers
         [HttpPost]
         public IHttpActionResult CreateUser(UserDto userDto)
         {
-            if (!ModelState.IsValid) return BadRequest();
+            if (!ModelState.IsValid) return BadRequest(ModelState);
 
             var user = Mapper.Map<UserDto, User>(userDto);
 

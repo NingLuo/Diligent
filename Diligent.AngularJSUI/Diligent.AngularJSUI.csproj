@@ -78,6 +78,8 @@
     <Content Include="app\user\register.html" />
     <Content Include="app\user\register.js" />
     <Content Include="app\user\user.module.js" />
+    <Content Include="Scripts\angular-messages.js" />
+    <Content Include="Scripts\angular-messages.min.js" />
     <Content Include="Scripts\angular-resource.js" />
     <Content Include="Scripts\angular-resource.min.js" />
     <Content Include="style\app.css" />
@@ -89,6 +91,7 @@
     <Content Include="Scripts\angular-cookies.min.js.map" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Scripts\angular-resource.min.js.map" />
+    <Content Include="Scripts\angular-messages.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

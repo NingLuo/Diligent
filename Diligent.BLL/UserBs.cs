@@ -1,4 +1,6 @@
-﻿using Diligent.BOL;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Diligent.BOL;
 using Diligent.DAL.Core;
 
 namespace Diligent.BLL
@@ -11,6 +13,11 @@ namespace Diligent.BLL
         {
             _unitOfWork = unitOfWork;
         }
+
+        public IEnumerable<User> GetAll()
+        {
+            return _unitOfWork.Users.GetAll();
+        } 
 
         public User GetUserById(int id)
         {
@@ -29,7 +36,15 @@ namespace Diligent.BLL
 
         private bool IsValidOnCreate(User user)
         {
-            return true;
+            //Unique Email Validation
+            var email = user.Email;
+            var count = GetAll().Count(u => u.Email == email);
+            if (count != 0)
+            {
+                ErrorList.Add("This Email Already Exists");
+            }
+
+            return ErrorList.Count == 0;
         }
     }
 }
