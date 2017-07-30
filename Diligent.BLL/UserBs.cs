@@ -24,6 +24,25 @@ namespace Diligent.BLL
             return _unitOfWork.Users.Get(id);
         }
 
+        public User Login(User user)
+        {
+            var userInDb = _unitOfWork.Users.SingleOrDefault(u => u.Email == user.Email);
+
+            if (userInDb == null)
+            {
+                ErrorList.Add("User account with this email does not exist");
+                return null;
+            }
+
+            if (userInDb.Password != user.Password)
+            {
+                ErrorList.Add("Password is not corret");
+                return null;
+            }
+
+            return userInDb;
+        }
+
         public bool CreateUser(User user)
         {
             if (!IsValidOnCreate(user)) return false;

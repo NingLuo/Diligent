@@ -4,18 +4,50 @@
             <h3 class="panel-title">Log in</h3>
         </div>
         <div class="panel-body">
-            <div name="loginForm">                
-                <div class="form-group">
+            <form name="loginForm" novalidate>                
+                <div class="form-group" ng-class="{'has-error': loginForm.email.$invalid&&
+                                                                loginForm.email.$touched}">
                     <label for="email">Email:</label>
-                    <input type="email" name="email" class="form-control" />
+                    <input type="email" name="email" class="form-control" ng-model="user.email" required ng-maxlength="254"/>
+                    <span class="help-block" ng-show="loginForm.email.$touched">
+                        <span ng-messages="loginForm.email.$error">
+                            <span ng-message="required">
+                                Email is required.
+                            </span>
+                            <span ng-message="email">
+                                Please enter a valid email.
+                            </span>
+                            <span ng-message="maxlength">
+                                Email cannot exceed 254 characters in length.
+                            </span>
+                        </span>
+                    </span>
                 </div>
-                <div class="form-group">
+                <div class="form-group" ng-class="{'has-error': loginForm.password.$invalid&&
+                                                                loginForm.password.$touched}">
                     <label for="password">Password:</label>
-                    <input type="password" name="password" class="form-control" />
+                    <input type="password" name="password" class="form-control" ng-model="user.password" required/>
+                    <span class="help-block" ng-show="loginForm.password.$touched">
+                        <span ng-messages="loginForm.password.$error">
+                            <span ng-message="required">
+                                Password is required.
+                            </span>
+                        </span>
+                    </span>
                 </div>
                 <div class="form-group">
-                    <a type="button" class="btn btn-primary">Log in</a>
+                    <input type="submit" class="btn btn-primary" value="Log in" ng-click="vm.submit(user, loginForm.$valid)"></input>
                 </div>
+            </form>
+            <div class="error-messages">
+                <!--Server Side Validation Error-->
+                <ul ng-repeat="errorMessage in vm.serverErrorMessages">
+                    <li class="alert alert-danger">{{errorMessage[0]}}</li>
+                </ul>
+                <!--Client Side Validation Error-->
+                <ul ng-repeat="errorMessage in vm.clientErrorMessages">
+                    <li class="alert alert-danger">{{errorMessage}}</li>
+                </ul>
             </div>
         </div>
     </div>

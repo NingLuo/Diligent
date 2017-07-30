@@ -6,14 +6,40 @@
         .module('app.user')
         .controller('Login', Login);
 
-    function Login() {
+    Login.$inject = ['$scope', 'userResource'];
+
+    function Login($scope, userResource) {
         var vm = this;
+        vm.clientErrorMessages = [];
+        vm.serverErrorMessages = [];
 
-        activate();
+        vm.submit = function(user, isValid) {
+            if (isValid) {
+                vm.clearErrorMessages();
+                userResource.login(user, function (data) {
+                    console.log(data);
+                },function(error) {
+                    vm.serverErrorMessages = error.data.modelState;
+                });                
+            }
+            else {
+                vm.triggerAllValidations();
+                vm.clientErrorMessages.push("Please correct the validation errors.");
+            }
+        };
 
-        function activate() {
-            console.log('Login controller');
-        }
+        vm.clearErrorMessages = function () {
+            vm.serverErrorMessages = null;
+            vm.clientErrorMessages = null;
+        };
+
+        vm.triggerAllValidations = function () {
+            angular.forEach($scope.loginForm.$error, function (field) {
+                angular.forEach(field, function (errorField) {
+                    errorField.$setTouched();
+                });
+            });
+        };
     }
 
 })();

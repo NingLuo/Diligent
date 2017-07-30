@@ -44,11 +44,33 @@ namespace Diligent.API.Controllers
                 return Created(new Uri(Request.RequestUri + "/" + userDto.Id), userDto);
             }
 
+            AddErrorMessageToModelState();
+
+            return BadRequest(ModelState);
+        }
+
+        [Route("api/user/login")]
+        [ResponseType(typeof(UserDto))]
+        [HttpPost]
+        public IHttpActionResult Login(UserDto userDto)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            var userInDb = _userBs.Login(Mapper.Map<UserDto, User>(userDto));
+
+            if (userInDb != null) return Ok(userInDb);
+
+            AddErrorMessageToModelState();
+
+            return BadRequest(ModelState);
+        }
+
+        private void AddErrorMessageToModelState()
+        {
             foreach (var error in _userBs.ErrorList)
             {
                 ModelState.AddModelError("", error);
             }
-            return BadRequest(ModelState);
         }
     }
 }

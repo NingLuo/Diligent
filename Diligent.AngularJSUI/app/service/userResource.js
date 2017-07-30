@@ -9,7 +9,14 @@
     userResource.$inject = ['$resource', 'appSettings'];
 
     function userResource($resource, appSettings) {
-        return $resource(appSettings.serverPath + '/api/user/:id');
+        return $resource(appSettings.serverPath + '/api/user/:id', null,
+            {
+                'login': {
+                    url: appSettings.serverPath + '/api/user/login',
+                    method: 'POST',
+                    isArray: false
+                }   
+            });
     };
 
 })();
