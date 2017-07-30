@@ -5,7 +5,8 @@
         'app.core',
         'app.layout',
         'app.user',
-        'app.service'
+        'app.service',
+        'app.task'
     ]);
 
 })();
