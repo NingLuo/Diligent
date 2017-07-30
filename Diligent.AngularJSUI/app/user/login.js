@@ -6,16 +6,16 @@
         .module('app.user')
         .controller('Login', Login);
 
-    Login.$inject = ['$scope', 'userResource'];
+    Login.$inject = ['$scope', 'userResource', 'utilityService'];
 
-    function Login($scope, userResource) {
+    function Login($scope, userResource, utilityService) {
         var vm = this;
         vm.clientErrorMessages = [];
         vm.serverErrorMessages = [];
 
-        vm.submit = function(user, isValid) {
-            if (isValid) {
-                vm.clearErrorMessages();
+        vm.submit = function (user, isValid) {
+            utilityService.clearErrorMessages(vm);
+            if (isValid) {             
                 userResource.login(user, function (data) {
                     console.log(data);
                 },function(error) {
@@ -26,11 +26,6 @@
                 vm.triggerAllValidations();
                 vm.clientErrorMessages.push("Please correct the validation errors.");
             }
-        };
-
-        vm.clearErrorMessages = function () {
-            vm.serverErrorMessages = null;
-            vm.clientErrorMessages = null;
         };
 
         vm.triggerAllValidations = function () {
