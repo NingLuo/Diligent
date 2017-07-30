@@ -24,18 +24,10 @@
                     });
             }
             else {
-                vm.triggerAllValidations();
+                utilityService.triggerFormValidations($scope.registerForm);
                 vm.clientErrorMessages.push("Please correct the validation errors.");
             }
         }
-
-        vm.triggerAllValidations = function() {
-            angular.forEach($scope.registerForm.$error, function(field) {
-                angular.forEach(field,function(errorField) {
-                    errorField.$setTouched();
-                });
-            });
-        };
     }
 
 })();

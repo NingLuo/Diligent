@@ -10,7 +10,8 @@
 
     function utilityService() {
         var service = {
-            clearErrorMessages: clearErrorMessages
+            clearErrorMessages: clearErrorMessages,
+            triggerFormValidations: triggerFormValidations
         }
 
         return service;
@@ -19,6 +20,14 @@
         function clearErrorMessages(viewModel) {
             viewModel.serverErrorMessages = [];
             viewModel.clientErrorMessages = [];
+        }
+
+        function triggerFormValidations(form) {
+            angular.forEach(form.$error, function (field) {
+                angular.forEach(field, function (errorField) {
+                    errorField.$setTouched();
+                });
+            });
         }
     }
 
