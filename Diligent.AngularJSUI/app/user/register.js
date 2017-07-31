@@ -6,14 +6,14 @@
         .module('app.user')
         .controller('Register', Register);
 
-    Register.$inject = ['$scope', 'userResource', 'utilityService', 'account', '$state'];
+    Register.$inject = ['$scope', 'userResource', 'utility', 'account', '$state'];
 
-    function Register($scope, userResource, utilityService, account, $state) {
+    function Register($scope, userResource, utility, account, $state) {
         var vm = this;
         vm.clientErrorMessages = [];
 
         vm.submit = function (user, isValid) {
-            utilityService.clearErrorMessages(vm);
+            utility.clearErrorMessages(vm);
             if (isValid) {               
                 account.register(user).then(
                     function (data) {
@@ -26,7 +26,7 @@
                 );
             }
             else {
-                utilityService.triggerFormValidations($scope.registerForm);
+                utility.triggerFormValidations($scope.registerForm);
                 vm.clientErrorMessages.push("Please correct the validation errors.");
             }
         }

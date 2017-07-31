@@ -6,15 +6,15 @@
         .module('app.user')
         .controller('Login', Login);
 
-    Login.$inject = ['$scope', 'userResource', 'utilityService', '$state', 'account', '$rootScope'];
+    Login.$inject = ['$scope', 'userResource', 'utility', '$state', 'account'];
 
-    function Login($scope, userResource, utilityService, $state, account, $rootScope) {
+    function Login($scope, userResource, utility, $state, account) {
         var vm = this;
         vm.clientErrorMessages = [];
         vm.serverErrorMessages = [];
 
         vm.submit = function (user, isValid) {
-            utilityService.clearErrorMessages(vm);
+            utility.clearErrorMessages(vm);
             if (isValid) {                             
                 account.login(user).then(
                     function (data) {
@@ -27,7 +27,7 @@
                 );
             }
             else {
-                utilityService.triggerFormValidations($scope.loginForm);
+                utility.triggerFormValidations($scope.loginForm);
                 vm.clientErrorMessages.push("Please correct the validation errors.");
             }
         };

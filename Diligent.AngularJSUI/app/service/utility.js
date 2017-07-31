@@ -4,11 +4,11 @@
 
     angular
         .module('app.service')
-        .factory('utilityService', utilityService);
+        .factory('utility', utility);
 
-    utilityService.$inject = [];
+    utility.$inject = [];
 
-    function utilityService() {
+    function utility() {
         var service = {
             clearErrorMessages: clearErrorMessages,
             triggerFormValidations: triggerFormValidations
