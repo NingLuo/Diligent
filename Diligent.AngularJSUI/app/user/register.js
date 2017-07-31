@@ -17,7 +17,8 @@
             if (isValid) {
                 userResource.save(user,
                     function (data) {
-                        console.log(data);                       
+                        console.log(data);
+                        $state.go('today');
                     },
                     function(error) {
                         vm.serverErrorMessages = error.data.modelState;

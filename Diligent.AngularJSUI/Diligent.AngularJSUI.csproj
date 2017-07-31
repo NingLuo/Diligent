@@ -75,6 +75,8 @@
     <Content Include="app\service\userResource.js" />
     <Content Include="app\service\utility.js" />
     <Content Include="app\task\task.module.js" />
+    <Content Include="app\task\today.html" />
+    <Content Include="app\task\today.js" />
     <Content Include="app\user\login.html" />
     <Content Include="app\user\login.js" />
     <Content Include="app\user\register.html" />

@@ -29,8 +29,17 @@
             controllerAs: 'vm'
         };
 
+        var todayState = {
+            name: 'today',
+            url: '/today',
+            templateUrl: 'app/task/today.html',
+            controller: 'Today',
+            controllerAs: 'vm'
+        }
+
         $stateProvider.state(registerState);
         $stateProvider.state(loginState);
+        $stateProvider.state(todayState);
 
         $locationProvider.html5Mode(true);
     }
