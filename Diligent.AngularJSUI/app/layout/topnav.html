@@ -14,8 +14,9 @@
         </div>
         <div class="topnav-account">
             <ul>
-                <li><a ui-sref="login">Log in</a></li>
-                <li><a ui-sref="register">Sign up</a></li>
+                <li ng-show="isLoggedIn == 'false'"><a ui-sref="login">Log in</a></li>
+                <li ng-show="isLoggedIn == 'false'"><a ui-sref="register">Sign up</a></li>
+                <li ng-show="isLoggedIn == 'true'"><a ui-sref="logout">Log out</a></li>
             </ul>
         </div>
     </div>

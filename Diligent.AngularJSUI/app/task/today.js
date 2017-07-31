@@ -6,10 +6,11 @@
         .module('app.task')
         .controller('Today', Today);
 
-    Today.$inject = [];
+    Today.$inject = ['$rootScope'];
 
-    function Today() {
+    function Today($rootScope) {
         console.log('today ctrl');
+        console.log($rootScope.isLoggedIn, $rootScope.currentUser);
     }
 
 })();

@@ -12,7 +12,9 @@
         var service = {
             register: register,
             login: login,
-            setCurrentUser: setCurrentUser
+            logout: logout,
+            setCurrentUser: setCurrentUser,
+            getCurrentUser: getCurrentUser
         }
 
         return service;
@@ -26,6 +28,14 @@
             return userResource.login(user).$promise;
         }
 
+        function logout() {
+            $cookies.put('isLoggedIn', 'false');
+            $rootScope.isLoggedIn = $cookies.get('isLoggedIn');
+
+            $cookies.putObject('currentUser', null);
+            $rootScope.currentUser = $cookies.getObject('currentUser');
+        }
+
         function setCurrentUser(user) {
             if (user) {
                 $cookies.put('isLoggedIn', 'true');
@@ -37,6 +47,10 @@
             else {
                 console.log('Unable to set user profile', user);
             }
+        }
+
+        function getCurrentUser() {
+            return $rootScope.currentUser;
         }
     }
 

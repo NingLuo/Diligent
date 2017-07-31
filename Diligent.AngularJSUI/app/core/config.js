@@ -29,6 +29,13 @@
             controllerAs: 'vm'
         };
 
+        var logoutState = {
+            name: 'logout',
+            url: '/logout',
+            controller: 'Logout',
+            controllerAs: 'vm'
+        }
+
         var todayState = {
             name: 'today',
             url: '/today',
@@ -39,6 +46,7 @@
 
         $stateProvider.state(registerState);
         $stateProvider.state(loginState);
+        $stateProvider.state(logoutState);
         $stateProvider.state(todayState);
 
         $locationProvider.html5Mode(true);
