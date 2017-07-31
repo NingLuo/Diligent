@@ -71,6 +71,7 @@
     <Content Include="app\layout\shell.js" />
     <Content Include="app\layout\sidebar.html" />
     <Content Include="app\layout\topnav.js" />
+    <Content Include="app\service\account.js" />
     <Content Include="app\service\service.module.js" />
     <Content Include="app\service\userResource.js" />
     <Content Include="app\service\utility.js" />

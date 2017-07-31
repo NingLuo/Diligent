@@ -15,7 +15,7 @@
                     url: appSettings.serverPath + '/api/user/login',
                     method: 'POST',
                     isArray: false
-                }   
+                }
             });
     };
 

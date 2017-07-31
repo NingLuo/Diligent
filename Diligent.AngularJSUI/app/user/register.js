@@ -6,23 +6,24 @@
         .module('app.user')
         .controller('Register', Register);
 
-    Register.$inject = ['$scope', 'userResource', 'utilityService'];
+    Register.$inject = ['$scope', 'userResource', 'utilityService', 'account', '$state'];
 
-    function Register($scope, userResource, utilityService) {
+    function Register($scope, userResource, utilityService, account, $state) {
         var vm = this;
         vm.clientErrorMessages = [];
 
         vm.submit = function (user, isValid) {
             utilityService.clearErrorMessages(vm);
-            if (isValid) {
-                userResource.save(user,
+            if (isValid) {               
+                account.register(user).then(
                     function (data) {
-                        console.log(data);
+                        account.setCurrentUser(data);
                         $state.go('today');
                     },
-                    function(error) {
+                    function (error) {
                         vm.serverErrorMessages = error.data.modelState;
-                    });
+                    }
+                );
             }
             else {
                 utilityService.triggerFormValidations($scope.registerForm);

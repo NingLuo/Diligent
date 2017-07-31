@@ -4,7 +4,8 @@
 
     angular.module('app.core', [
         'ui.router',
-        'ngMessages'
+        'ngMessages',
+        'ngCookies'
     ]);
 
 })();

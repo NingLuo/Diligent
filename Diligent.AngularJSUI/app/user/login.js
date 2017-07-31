@@ -6,22 +6,25 @@
         .module('app.user')
         .controller('Login', Login);
 
-    Login.$inject = ['$scope', 'userResource', 'utilityService', '$state'];
+    Login.$inject = ['$scope', 'userResource', 'utilityService', '$state', 'account', '$rootScope'];
 
-    function Login($scope, userResource, utilityService, $state) {
+    function Login($scope, userResource, utilityService, $state, account, $rootScope) {
         var vm = this;
         vm.clientErrorMessages = [];
         vm.serverErrorMessages = [];
 
         vm.submit = function (user, isValid) {
             utilityService.clearErrorMessages(vm);
-            if (isValid) {             
-                userResource.login(user, function (data) {
-                    console.log(data);
-                    $state.go('today');
-                },function(error) {
-                    vm.serverErrorMessages = error.data.modelState;
-                });                
+            if (isValid) {                             
+                account.login(user).then(
+                    function (data) {
+                        account.setCurrentUser(data);
+                        $state.go('today');
+                    },
+                    function (error) {
+                        vm.serverErrorMessages = error.data.modelState;
+                    }
+                );
             }
             else {
                 utilityService.triggerFormValidations($scope.loginForm);
