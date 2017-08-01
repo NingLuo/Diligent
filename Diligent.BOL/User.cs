@@ -6,7 +6,7 @@ namespace Diligent.BOL
     {
         public User()
         {
-            Tasks = new HashSet<Task>();
+            Projects = new HashSet<Project>();
         }
 
         public int Id { get; set; }
@@ -14,6 +14,6 @@ namespace Diligent.BOL
         public string Password { get; set; }
         public string Username { get; set; }
 
-        public virtual ICollection<Task> Tasks { get; set; }
+        public virtual ICollection<Project> Projects { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace Diligent.DAL.Migrations
         public override void Up()
         {
             CreateTable(
-                "dbo.Category",
+                "dbo.Project",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -29,7 +29,7 @@ namespace Diligent.DAL.Migrations
                         StatusId = c.Byte(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Category", t => t.CategoryId, cascadeDelete: true)
+                .ForeignKey("dbo.Project", t => t.CategoryId, cascadeDelete: true)
                 .ForeignKey("dbo.Status", t => t.StatusId)
                 .ForeignKey("dbo.User", t => t.UserId, cascadeDelete: true)
                 .Index(t => t.UserId)
@@ -79,17 +79,17 @@ namespace Diligent.DAL.Migrations
             DropForeignKey("dbo.Task", "StatusId", "dbo.Status");
             DropForeignKey("dbo.ReviewMission", "TaskId", "dbo.Task");
             DropForeignKey("dbo.ReviewMission", "StatusId", "dbo.Status");
-            DropForeignKey("dbo.Task", "CategoryId", "dbo.Category");
+            DropForeignKey("dbo.Task", "ProjectId", "dbo.Project");
             DropIndex("dbo.ReviewMission", new[] { "StatusId" });
             DropIndex("dbo.ReviewMission", new[] { "TaskId" });
             DropIndex("dbo.Task", new[] { "StatusId" });
-            DropIndex("dbo.Task", new[] { "CategoryId" });
+            DropIndex("dbo.Task", new[] { "ProjectId" });
             DropIndex("dbo.Task", new[] { "UserId" });
             DropTable("dbo.User");
             DropTable("dbo.Status");
             DropTable("dbo.ReviewMission");
             DropTable("dbo.Task");
-            DropTable("dbo.Category");
+            DropTable("dbo.Project");
         }
     }
 }

@@ -15,11 +15,11 @@ namespace Diligent.API.Dtos
         public string Description { get; set; }
         public DateTime StartDate { get; set; }
         public int UserId { get; set; }
-        public int CategoryId { get; set; }
+        public int ProjectId { get; set; }
         public byte StatusId { get; set; }
 
         public UserDto User { get; set; }
-        public CategoryDto Category { get; set; }
+        public ProjectDto Project { get; set; }
         public StatusDto Status { get; set; }
         public ICollection<ReviewMissionDto> ReviewMissions { get; set; }
     }

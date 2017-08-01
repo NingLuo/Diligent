@@ -11,9 +11,9 @@ namespace Diligent.DAL.Repositories
         {           
         }
         
-        public User GetUserWithTasks(int id)
+        public User GetUserWithProjects(int id)
         {
-            return DiligentContext.Users.Include(u => u.Tasks).SingleOrDefault(u => u.Id == id);
+            return DiligentContext.Users.Include(u => u.Projects).SingleOrDefault(u => u.Id == id);
         }
 
         public DiligentContext DiligentContext

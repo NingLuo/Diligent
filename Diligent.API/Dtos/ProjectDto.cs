@@ -2,9 +2,9 @@
 
 namespace Diligent.API.Dtos
 {
-    public class CategoryDto
+    public class ProjectDto
     {
-        public CategoryDto()
+        public ProjectDto()
         {
             Tasks = new HashSet<TaskDto>();
         }

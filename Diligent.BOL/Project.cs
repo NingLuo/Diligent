@@ -2,16 +2,18 @@
 
 namespace Diligent.BOL
 {
-    public class Category
+    public class Project
     {
-        public Category()
+        public Project()
         {
             Tasks = new HashSet<Task>();
         }
 
         public int Id { get; set; }
         public string Name { get; set; }
+        public int UserId { get; set; }
 
+        public virtual User User { get; set; }
         public virtual ICollection<Task> Tasks { get; set; }         
     }
 }

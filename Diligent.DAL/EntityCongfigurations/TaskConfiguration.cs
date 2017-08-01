@@ -16,9 +16,9 @@ namespace Diligent.DAL.EntityCongfigurations
             .IsRequired()
             .HasMaxLength(255);
 
-            HasRequired(t => t.Category)
+            HasRequired(t => t.Project)
             .WithMany(c => c.Tasks)
-            .HasForeignKey(t => t.CategoryId);
+            .HasForeignKey(t => t.ProjectId);
 
             HasMany(t => t.ReviewMissions)
             .WithRequired(rm => rm.Task)
@@ -28,10 +28,6 @@ namespace Diligent.DAL.EntityCongfigurations
             .WithMany()
             .HasForeignKey(t => t.StatusId)
             .WillCascadeOnDelete(false);
-
-            HasRequired(t => t.User)
-            .WithMany(u => u.Tasks)
-            .HasForeignKey(t => t.UserId);
         }
     }
 }

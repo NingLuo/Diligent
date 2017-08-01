@@ -12,3 +12,4 @@ D:\Projects\Diligent\Diligent\Diligent.DAL\obj\Debug\Diligent.DAL.Migrations.Ini
 D:\Projects\Diligent\Diligent\Diligent.DAL\obj\Debug\Diligent.DAL.csproj.GenerateResource.Cache
 D:\Projects\Diligent\Diligent\Diligent.DAL\obj\Debug\Diligent.DAL.dll
 D:\Projects\Diligent\Diligent\Diligent.DAL\obj\Debug\Diligent.DAL.pdb
+D:\Projects\Diligent\Diligent\Diligent.DAL\obj\Debug\Diligent.DAL.Migrations.ChangeCategorytoProjectuseprojectasconnectionbetweenuserandtask.resources

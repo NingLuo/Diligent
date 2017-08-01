@@ -12,7 +12,7 @@ namespace Diligent.DAL
             
         }
 
-        public DbSet<Category> Categories { get; set; }              
+        public DbSet<Project> Projects { get; set; }              
         public DbSet<ReviewMission> ReviewMissions { get; set; }        
         public DbSet<Status> Statuses { get; set; }
         public DbSet<Task> Tasks { get; set; }
@@ -20,7 +20,7 @@ namespace Diligent.DAL
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(new CategoryConfiguration());
+            modelBuilder.Configurations.Add(new ProjectConfiguration());
             modelBuilder.Configurations.Add(new ReviewMissionConfiguration());
             modelBuilder.Configurations.Add(new StatusConfiguration());
             modelBuilder.Configurations.Add(new TaskConfiguration());

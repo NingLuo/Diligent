@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\core\run.js" />
     <Content Include="app\layout\layout.module.js" />
     <Content Include="app\layout\shell.html" />
     <Content Include="app\layout\shell.js" />
@@ -80,6 +81,7 @@
     <Content Include="app\task\today.js" />
     <Content Include="app\user\login.html" />
     <Content Include="app\user\login.js" />
+    <Content Include="app\user\logout.js" />
     <Content Include="app\user\register.html" />
     <Content Include="app\user\register.js" />
     <Content Include="app\user\user.module.js" />

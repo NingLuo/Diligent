@@ -8,8 +8,8 @@ namespace Diligent.API.App_Start
     {
         public MappingProfile()
         {
-            Mapper.CreateMap<Category, CategoryDto>();
-            Mapper.CreateMap<CategoryDto, Category>();
+            Mapper.CreateMap<Project, ProjectDto>();
+            Mapper.CreateMap<ProjectDto, Project>();
 
             Mapper.CreateMap<ReviewMission, ReviewMissionDto>();
             Mapper.CreateMap<ReviewMissionDto, ReviewMission>();

@@ -132,7 +132,7 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\UserController.cs" />
-    <Compile Include="Dtos\CategoryDto.cs" />
+    <Compile Include="Dtos\ProjectDto.cs" />
     <Compile Include="Dtos\ReviewMissionDto.cs" />
     <Compile Include="Dtos\StatusDto.cs" />
     <Compile Include="Dtos\TaskDto.cs" />
