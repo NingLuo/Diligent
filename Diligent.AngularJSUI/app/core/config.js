@@ -7,9 +7,9 @@
     core.config(configure);
 
     configure.$inject = ['$stateProvider', '$urlMatcherFactoryProvider', '$urlRouterProvider',
-                         '$locationProvider'];
+                         '$locationProvider', '$compileProvider'];
 
-    function configure($stateProvider, $urlMatcherFactoryProvider, $urlRouterProvider, $locationProvider) {
+    function configure($stateProvider, $urlMatcherFactoryProvider, $urlRouterProvider, $locationProvider, $compileProvider) {
         $urlRouterProvider.otherwise('/login');
         $urlMatcherFactoryProvider.caseInsensitive(true);
 
@@ -50,5 +50,7 @@
         $stateProvider.state(todayState);
 
         $locationProvider.html5Mode(true);
+        // Remove ng-scope div
+        $compileProvider.debugInfoEnabled(false);
     }
 })();

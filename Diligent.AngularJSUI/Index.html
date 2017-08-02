@@ -11,7 +11,9 @@
 </head>
 <body>
     
-    <div ng-include="'app/layout/shell.html'"></div>
+    <div class="main-container">
+        <ng-include src="'app/layout/shell.html'" replace></ng-include>
+    </div>
     
     <!--inject-vendor:js-->
     <script src="Scripts/jquery-1.9.1.min.js"></script>
