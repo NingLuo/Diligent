@@ -10,8 +10,10 @@ namespace Diligent.DAL
         {
             _context = context;
             Users = new UserRepository(_context);
+            Projects = new ProjectRepository(_context);
         }
 
+        public IProjectRepository Projects { get; private set; }
         public IUserRepository Users { get; private set; }
 
         public void Complete()

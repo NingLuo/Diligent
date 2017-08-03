@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.Collections.Generic;
+using AutoMapper;
 using Diligent.API.Dtos;
 using Diligent.BOL;
 
@@ -10,6 +11,7 @@ namespace Diligent.API.App_Start
         {
             Mapper.CreateMap<Project, ProjectDto>();
             Mapper.CreateMap<ProjectDto, Project>();
+            //Mapper.CreateMap<IEnumerable<Project>, IEnumerable<ProjectDto>>();
 
             Mapper.CreateMap<ReviewMission, ReviewMissionDto>();
             Mapper.CreateMap<ReviewMissionDto, ReviewMission>();

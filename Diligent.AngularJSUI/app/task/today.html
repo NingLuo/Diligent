@@ -1,1 +1,21 @@
 ﻿<h2>Today</h2>
+<!--<div><a><span class="glyphicon glyphicon-plus"></span>Add Task</a></div>-->
+<div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-5">
+                <input type="text" class="form-control" placeholder="Task Subject" ng-model="task.subject"/>
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="Project" ng-model="task.project"/>
+            </div>
+            <div class="col-md-4">
+                <input type="date" class="form-control" ng-model="task.startDate"/>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-success" ng-click="vm.addTask(task)">Add Task</button>
+        <button class="btn btn-default">Cancel</button>     
+    </div>
+</div>

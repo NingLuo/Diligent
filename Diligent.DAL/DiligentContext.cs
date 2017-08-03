@@ -9,7 +9,7 @@ namespace Diligent.DAL
         private const string DevConnection = "DiligentDev";
         public DiligentContext():base(DevConnection)
         {
-            
+            this.Configuration.LazyLoadingEnabled = false;
         }
 
         public DbSet<Project> Projects { get; set; }              

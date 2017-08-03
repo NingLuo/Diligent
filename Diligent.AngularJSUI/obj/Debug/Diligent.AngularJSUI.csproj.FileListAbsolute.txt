@@ -15,6 +15,5 @@ D:\Projects\Diligent\Diligent\Diligent.AngularJSUI\bin\Diligent.AngularJSUI.dll
 D:\Projects\Diligent\Diligent\Diligent.AngularJSUI\bin\Diligent.AngularJSUI.pdb
 D:\Projects\Diligent\Diligent\Diligent.AngularJSUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\Projects\Diligent\Diligent\Diligent.AngularJSUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Projects\Diligent\Diligent\Diligent.AngularJSUI\obj\Debug\Diligent.AngularJSUI.csprojResolveAssemblyReference.cache
 D:\Projects\Diligent\Diligent\Diligent.AngularJSUI\obj\Debug\Diligent.AngularJSUI.dll
 D:\Projects\Diligent\Diligent\Diligent.AngularJSUI\obj\Debug\Diligent.AngularJSUI.pdb

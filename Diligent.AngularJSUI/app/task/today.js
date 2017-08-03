@@ -9,8 +9,12 @@
     Today.$inject = ['$rootScope'];
 
     function Today($rootScope) {
-        console.log('today ctrl');
-        console.log($rootScope.isLoggedIn, $rootScope.currentUser);
+        var vm = this;
+        vm.today = new Date();
+
+        vm.addTask = function(task) {
+            console.log(task);
+        }
     }
 
 })();
